@@ -15,7 +15,19 @@ describe('CookbookCli', () => {
 
     //Assert
     expect(msg).toBe('Successfully added the following recipe: Coffee')
-    });
+    
+      //Test case: 2       
+      //Arrange
+      const myCookBookRecent = new Cookbook();
+      const myCookBookCliRecent = new CookbookCli(myCookBookRecent);
+  
+     //Act
+     const msgNew = myCookBookCliRecent.run('add', []);
+  
+      //Assert
+      expect(msgNew).toBe('Please include any recipe')
+  
+  });
   });
 
 
