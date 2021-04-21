@@ -91,6 +91,19 @@ describe('CookbookCli', () => {
       expect(msg).toBe('Successfully removed the following recipe: undefined');
 
 
+
+      //Test case: 6    
+      //Arrange
+      const myCookBookRecent = new Cookbook();
+      const myCookBookCliRecent = new CookbookCli(myCookBookRecent);
+           
+  
+     //Act
+     
+     const msgNew = myCookBookCli.run('sort', 'Coffee');
+       
+      //Assert
+      expect(msgNew).toBe('Whoops, the following command is unsupported: sort.');
     });
   });
 });
