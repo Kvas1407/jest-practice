@@ -39,14 +39,13 @@ describe('CookbookCli', () => {
       //Arrange
       const myCookBook = new Cookbook();
       const myCookBookCli = new CookbookCli(myCookBook);
+           
   
      //Act
      const msg = myCookBookCli.run('list');
   
       //Assert
       expect(msg).toBe('You have the following recipes: ()');
-
-
 
     });
   });
@@ -55,6 +54,20 @@ describe('CookbookCli', () => {
 
   describe('Retrieving a recipe', () => {
     test('should display the ingredients required to make the specified recipe', () => {
+      
+      //Test case: 4       
+      //Arrange
+      const myCookBook = new Cookbook();
+      const myCookBookCli = new CookbookCli(myCookBook);
+      myCookBookCli.add('Coffee', ['Coffee Powder', 'Sugar', 'Milk']);
+      
+  
+     //Act
+     const msg = myCookBookCli.run('get', 'Coffee');
+  
+      //Assert
+      expect(msg).toBe('The ingredients for undefined are: undefined');
+
 
     });
   });
