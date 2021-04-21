@@ -24,7 +24,7 @@ class CookbookCli {
     this.cookbook.addRecipe(name, ingredients);
     return `Successfully added the following recipe: ${name}`;
     } else{
-      return `Please include any recipe`;
+      return `Sorry dear friend! Please do include any recipe`;
     }
   }
 
