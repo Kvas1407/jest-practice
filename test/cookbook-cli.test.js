@@ -4,7 +4,9 @@ const { CookbookCli } = require('../src/cookbook-cli');
 describe('CookbookCli', () => {
   describe('Adding recipes', () => {
     test('should accept the recipe information and display the correct message', () => {
-    //Arrange
+    
+      //Test case: 1       
+      //Arrange
     const myCookBook = new Cookbook();
     const myCookBookCli = new CookbookCli(myCookBook);
 
