@@ -34,6 +34,19 @@ describe('CookbookCli', () => {
 
   describe('Listing recipes', () => {
     test('should display the correct message listing all of the recipe names', () => {
+    
+      //Test case: 3       
+      //Arrange
+      const myCookBook = new Cookbook();
+      const myCookBookCli = new CookbookCli(myCookBook);
+  
+     //Act
+     const msg = myCookBookCli.run('list');
+  
+      //Assert
+      expect(msg).toBe('You have the following recipes: ()');
+
+
 
     });
   });
