@@ -76,6 +76,20 @@ describe('CookbookCli', () => {
 
   describe('Deleting a recipe', () => {
     test('should accept the recipe name and display the correct message', () => {
+    
+      //Test case: 5       
+      //Arrange
+      const myCookBook = new Cookbook();
+      const myCookBookCli = new CookbookCli(myCookBook);
+           
+  
+     //Act
+     myCookBookCli.run('add', 'Coffee', ['Coffee Powder', 'Sugar', 'Milk']);
+     const msg = myCookBookCli.run('remove', 'Coffee');
+       
+      //Assert
+      expect(msg).toBe('Successfully removed the following recipe: undefined');
+
 
     });
   });
