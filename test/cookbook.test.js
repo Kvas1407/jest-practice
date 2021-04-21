@@ -30,12 +30,13 @@ describe('Cookbook', () => {
       //Test case: 3
       //Arrange
       const recipeBook = new Cookbook();
+      recipeBook.addRecipe('Noodles', ['Noodles', 'Spices', 'Tomato', 'Onion']);
 
       //Act
-      const recipeName = recipeBook.listRecipes();
+      const recipeName = recipeBook.getRecipe('Noodles');
 
       //Assert
-      expect(recipeName).toEqual ([]);
+      expect(recipeName).toEqual (['Noodles', 'Spices', 'Tomato', 'Onion']);
      
 
     });
@@ -46,6 +47,15 @@ describe('Cookbook', () => {
   describe('Retrieving a recipe', () => {
     test('should allow the ingredients for a recipe to be retrieved', () => {
 
+      //Test case: 4
+      //Arrange
+      const recipeBook = new Cookbook();
+
+      //Act
+      
+
+      //Assert
+      
     });
   });
 
