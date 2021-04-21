@@ -25,7 +25,7 @@ describe('CookbookCli', () => {
      const msgNew = myCookBookCliRecent.run('add', []);
   
       //Assert
-      expect(msgNew).toBe('Please include any recipe')
+      expect(msgNew).toBe('Sorry dear friend! Please do include any recipe');
   
   });
   });
