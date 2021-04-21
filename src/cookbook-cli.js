@@ -20,8 +20,12 @@ class CookbookCli {
   }
 
   add(name, ingredients) {
+    if (name && ingredients != null){
     this.cookbook.addRecipe(name, ingredients);
     return `Successfully added the following recipe: ${name}`;
+    } else{
+      return `Please include any recipe`;
+    }
   }
 
   get(name) {
