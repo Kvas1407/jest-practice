@@ -30,13 +30,12 @@ describe('Cookbook', () => {
       //Test case: 3
       //Arrange
       const recipeBook = new Cookbook();
-      recipeBook.addRecipe('Noodles', ['Noodles', 'Spices', 'Tomato', 'Onion']);
 
       //Act
-      const recipeName = recipeBook.getRecipe('Noodles');
+      const recipeName = recipeBook.listRecipes();
 
       //Assert
-      expect(recipeName).toEqual (['Noodles', 'Spices', 'Tomato', 'Onion']);
+      expect(recipeName).toEqual ([]);
      
 
     });
@@ -50,11 +49,13 @@ describe('Cookbook', () => {
       //Test case: 4
       //Arrange
       const recipeBook = new Cookbook();
+      recipeBook.addRecipe('Noodles', ['Noodles', 'Spices', 'Tomato', 'Onion']);
 
       //Act
-      
+      const recipeName = recipeBook.getRecipe('Noodles');
 
       //Assert
+      expect(recipeName).toEqual (['Noodles', 'Spices', 'Tomato', 'Onion']);
       
     });
   });
