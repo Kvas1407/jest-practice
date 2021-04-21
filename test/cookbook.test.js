@@ -65,6 +65,17 @@ describe('Cookbook', () => {
   describe('Deleting a recipe', () => {
     test('should allow a recipe to be deleted', () => {
 
+      //Test case: 5
+      //Arrange
+      const recipeBook = new Cookbook();
+      recipeBook.addRecipe('Noodles', ['Noodles', 'Spices', 'Tomato', 'Onion']);
+
+      //Act
+      recipeBook.removeRecipe('Noodles');
+
+      //Assert
+      expect(recipeBook.recipes).toEqual ({});
+
     });
   });
 });
