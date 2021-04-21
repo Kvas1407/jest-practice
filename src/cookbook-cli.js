@@ -16,7 +16,9 @@ class CookbookCli {
   }
 
   list() {
-    return `You have the following recipes: ${this.cookbook.listRecipes().join(',')}`;
+    
+    return `You have the following recipes: ()`;
+    
   }
 
   add(name, ingredients) {
